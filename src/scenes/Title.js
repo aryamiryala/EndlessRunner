@@ -4,7 +4,7 @@ class Title extends Phaser.Scene {
     }
     preload(){
         //load background image for title screen
-        this.load.image('forest', './assets/background.png');
+        this.load.image('background', './assets/background.png');
 
 
     }
@@ -12,7 +12,7 @@ class Title extends Phaser.Scene {
     create(){
       
       //add background image
-      this.forest= this.add.tileSprite(0, 0, 640, 480, 'forest').setOrigin(0,0);
+      this.background= this.add.tileSprite(0, 0, 640, 480, 'background').setOrigin(0,0);
 
 
         let titleConfig = {
@@ -44,12 +44,12 @@ class Title extends Phaser.Scene {
 
     update() {
 
-        this.forest.tilePositionX -= 2; 
+        this.background.tilePositionX -= 2; 
        
         if (Phaser.Input.Keyboard.JustDown(keyEnter)) {
            
            // this.sound.play('sfx_select');
-           // this.scene.start("menuScene");    
+             this.scene.start("menuScene");    
           }
           
           
