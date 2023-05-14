@@ -1,5 +1,10 @@
 /*
 
+Arya Miryala 
+Forest Run
+20 - 40 hours spent on game
+
+
 A programming technique that I was proud of that I implemented in this game is the animation aspect of my sprite. 
 Although I didn't use a texture atlas and I used a spritesheet I made a animation function that shows my sprite
 running and jumping. This was something I experimented with for a good amount of time and I am glad I got it working. 
