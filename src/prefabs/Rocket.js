@@ -7,7 +7,7 @@ class Rocket extends Phaser.Physics.Arcade.Sprite {
         scene.add.existing(this);
         //pixels per frame
        
-       //this.moveSpeed = speed; 
+    
     }
 
     update() {
@@ -33,6 +33,8 @@ class Rocket extends Phaser.Physics.Arcade.Sprite {
     reset() {
         //this.x = Math.floor(Math.random()); 
         this.x = game.config.width; 
+        this.y = Math.floor(Phaser.Math.Between(borderUISize*12 + borderPadding*6, borderUISize*7 + borderPadding*9));
+
 
     }
 }

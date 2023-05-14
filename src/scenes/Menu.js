@@ -9,6 +9,8 @@ class Menu extends Phaser.Scene{
     create(){
         this.background= this.add.tileSprite(0, 0, 640, 480, 'background').setOrigin(0,0);
 
+   
+
         let menuConfig = {
             fontFamily: 'Georgia', 
             fontSize: '28px', 
@@ -47,7 +49,6 @@ class Menu extends Phaser.Scene{
         }
         if (Phaser.Input.Keyboard.JustDown(keyC)) {
            
-            // this.sound.play('sfx_select');
               this.scene.start("creditScene");    
         }
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {

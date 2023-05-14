@@ -5,6 +5,7 @@ class Title extends Phaser.Scene {
     preload(){
         //load background image for title screen
         this.load.image('background', './assets/background.png');
+        this.load.audio('music', './assets/background.wav');
 
 
     }
@@ -13,6 +14,12 @@ class Title extends Phaser.Scene {
       
       //add background image
       this.background= this.add.tileSprite(0, 0, 640, 480, 'background').setOrigin(0,0);
+
+       //add music, set volume, play it
+       this.backgroundSong = this.sound.add('music', {volume: 0.4});   
+       this.backgroundSong.loop = true; 
+       this.backgroundSong.play();
+
 
 
         let titleConfig = {
@@ -45,6 +52,7 @@ class Title extends Phaser.Scene {
     update() {
 
         this.background.tilePositionX -= 2; 
+       
        
         if (Phaser.Input.Keyboard.JustDown(keyEnter)) {
            
